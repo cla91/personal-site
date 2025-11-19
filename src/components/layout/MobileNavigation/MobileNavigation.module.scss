@@ -1,0 +1,55 @@
+.menu {
+  position: fixed;
+  top: 0;
+  right: -100%; // default hidden
+  height: 100vh;
+  height: 100dvh;
+  width: min(70%, 25rem);
+  background: var(--surface-color);
+  color: var(--text-color);
+  padding: 6rem 3rem;
+  transition: right 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: -0.2rem 0 2rem var(--shadow-color);
+  z-index: 900;
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: $space-3;
+  }
+}
+
+.menu.open {
+  right: 0;
+}
+
+.menu a {
+  font-size: 2.2rem;
+  color: var(--heading-color);
+  transition: color 0.2s;
+  padding-block: $space-2;
+  width: 100%;
+  display: block;
+  &:hover {
+    color: var(--accent-color-hover);
+  }
+  &.active {
+    color: var(--accent-color);
+    font-weight: 600;
+  }
+}
+
+.closeArea {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(0.2rem);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s;
+  z-index: 800;
+}
+
+.closeArea.open {
+  opacity: 1;
+  pointer-events: all;
+}
