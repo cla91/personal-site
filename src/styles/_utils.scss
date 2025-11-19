@@ -1,0 +1,14 @@
+@use "./mixins" as *;
+@use "./variables" as *;
+
+.container {
+  padding-inline: $space-4;
+  @include screen-md {
+    padding-inline: $space-6;
+  }
+  @include screen-lg {
+    padding-inline: $space-8;
+    max-width: 112rem + $space-8;
+    margin-inline: auto;
+  }
+}
