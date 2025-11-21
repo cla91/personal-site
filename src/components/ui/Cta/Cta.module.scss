@@ -1,0 +1,36 @@
+.cta {
+  font-size: 1.6rem;
+  font-weight: 500;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: $space-1;
+  transition: color 0.2s ease;
+  //fallback color
+  color: var(--accent-color);
+  :global(.lucide) {
+    width: 1em;
+    height: 1em;
+    transform: translateX(0);
+    transition: transform 0.2s ease;
+  }
+  &:hover {
+    //fallback color
+    color: var(--accent-color-hover);
+    :global(.lucide) {
+      transform: translateX(1rem);
+    }
+  }
+}
+.primary {
+  color: var(--accent-color);
+  &:hover {
+    color: var(--accent-color-hover);
+  }
+}
+.secondary {
+  color: var(--secondary-color);
+  &:hover {
+    color: var(--secondary-color-hover);
+  }
+}

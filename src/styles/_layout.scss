@@ -1,0 +1,36 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+main {
+  display: grid;
+  gap: $section-spacing-s;
+  align-items: baseline;
+  @include screen-md {
+    gap: $section-spacing-m;
+  }
+  @include screen-lg {
+    gap: $section-spacing-l;
+  }
+}
+.navigableSection {
+  scroll-margin-block-start: $space-4;
+}
+.navigableSection > h2 {
+  margin-block-end: $space-7;
+  @include screen-md {
+    margin-block-end: $space-8;
+  }
+  @include screen-lg {
+    margin-block-end: $space-10;
+  }
+}
+footer {
+  padding-block-start: $section-spacing-s;
+  padding-block-end: $section-spacing-xs;
+  @include screen-md {
+    padding-block-start: $section-spacing-m;
+  }
+  @include screen-lg {
+    padding-block-start: $section-spacing-l;
+  }
+}

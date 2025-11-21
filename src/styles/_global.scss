@@ -1,15 +1,19 @@
 @use "./variables" as *;
 
-$transition: 0.2s linear;
-
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
   font-family: $font-body;
   color: var(--text-color);
   background-color: var(--bg-color);
-  font-size: clamp(1.6rem, 1.484rem + 0.493vw, 1.8rem);
-  transition: color $transition, background-color $transition;
+  font-size: 1.6rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
 }

@@ -1,14 +1,26 @@
 @use "./mixins" as *;
 @use "./variables" as *;
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
 .container {
-  padding-inline: $space-4;
+  padding-inline: $space-6;
+  width: min(100%, 90rem + ($space-10 * 2));
+  margin-inline: auto;
+  transition: padding 0.3s ease, width 0.3s ease, margin 0.3s ease;
   @include screen-md {
-    padding-inline: $space-6;
+    padding-inline: $space-8;
   }
   @include screen-lg {
-    padding-inline: $space-8;
-    max-width: 112rem + $space-8;
-    margin-inline: auto;
+    padding-inline: $space-10;
   }
 }
