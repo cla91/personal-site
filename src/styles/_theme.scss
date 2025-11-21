@@ -1,89 +1,42 @@
 @use "./variables" as *;
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300..800&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap");
 
-/* light theme */
+/* dark theme default*/
 :root {
   /* Backgrounds */
-  --bg-color: #{$neutral-color-100};
-  --bg-color-alt: #{$neutral-color-150};
-
-  /* Surfaces */
-  --surface-color: #{$neutral-color-100};
-  --surface-color-alt: #{$neutral-color-150};
+  --bg-color: #{$neutral-color-900};
+  --bg-color-alt: #{$neutral-color-850};
+  --surface-color: #{$neutral-color-800};
+  --surface-color-alt: #{$neutral-color-750};
 
   /* Text */
-  --text-color: #{$neutral-color-800};
-  --text-color-secondary: #{$neutral-color-600};
-  --heading-color: #{$neutral-color-900};
+  --text-color: #{$neutral-color-150};
+  --text-color-secondary: #{$neutral-color-300};
+  --heading-color: #{$neutral-color-100};
 
   /* Borders */
-  --border-color: #{$neutral-color-200};
-  --border-color-strong: #{$neutral-color-300};
+  --border-color: #{$neutral-color-750};
+  --border-color-strong: #{$neutral-color-700};
 
   /* Icons */
-  --icon-color: #{$neutral-color-600};
-  --icon-color-hover: #{$neutral-color-800};
+  --icon-color: #{$neutral-color-300};
+  --icon-color-hover: #{$neutral-color-100};
 
-  /* PRIMARY — pink */
-  --accent-color: #{$primary-color-600};
-  --accent-color-hover: #{$primary-color-700};
-  --accent-color-light: #{$primary-color-100};
+  /* PRIMARY — rosa berry */
+  --accent-color: #{$primary-color-400};
+  --accent-color-hover: #{$primary-color-300};
+  --accent-color-light: hsla(345, 100%, 65%, 0.25);
 
   /* SECONDARY — teal */
   --secondary-color: #{$secondary-color-400};
-  --secondary-color-hover: #{$secondary-color-500};
-  --secondary-color-light: #{$secondary-color-100};
+  --secondary-color-hover: #{$secondary-color-300};
+  --secondary-color-light: hsla(160, 60%, 60%, 0.25);
 
   /* Shadows */
-  --shadow-color: hsla(220, 20%, 15%, 0.08);
-  --shadow-color-strong: hsla(220, 20%, 10%, 0.15);
+  --shadow-color: hsla(0, 0%, 0%, 0.35);
+  --shadow-color-strong: hsla(0, 0%, 0%, 0.55);
 
   /* Focus outline */
-  --focus-outline: #{$primary-color-400};
-}
-
-/* dark theme */
-@media (prefers-color-scheme: dark) {
-  :root {
-    /* Backgrounds */
-    --bg-color: #{$neutral-color-900};
-    --bg-color-alt: #{$neutral-color-850};
-
-    /* Surfaces */
-    --surface-color: #{$neutral-color-800};
-    --surface-color-alt: #{$neutral-color-750};
-
-    /* Text */
-    --text-color: #{$neutral-color-150};
-    --text-color-secondary: #{$neutral-color-350};
-    --heading-color: #{$neutral-color-100};
-
-    /* Borders */
-    --border-color: #{$neutral-color-750};
-    --border-color-strong: #{$neutral-color-700};
-
-    /* Icons */
-    --icon-color: #{$neutral-color-350};
-    --icon-color-hover: #{$neutral-color-100};
-
-    /* PRIMARY — rosa berry */
-    --accent-color: #{$primary-color-400};
-    --accent-color-hover: #{$primary-color-300};
-    --accent-color-light: hsla(327, 95%, 69%, 0.25);
-
-    /* SECONDARY — teal */
-    --secondary-color: #{$secondary-color-300};
-    --secondary-color-hover: #{$secondary-color-200};
-    --secondary-color-light: hsla(172, 80%, 60%, 0.2);
-
-    /* Shadows */
-    --shadow-color: hsla(0, 0%, 0%, 0.35);
-    --shadow-color-strong: hsla(0, 0%, 0%, 0.55);
-
-    /* Focus outline */
-    --focus-outline: #{$primary-color-300};
-  }
+  --focus-outline: #{$primary-color-300};
 }
