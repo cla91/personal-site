@@ -1,0 +1,27 @@
+.intro {
+  color: var(--text-color-secondary);
+  margin-block-end: $space-6;
+}
+.contactsList {
+  display: grid;
+  gap: $space-4;
+
+  @include screen-md {
+    grid-template-columns: repeat(3, auto);
+  }
+
+  h3 {
+    font-size: 1.6rem;
+    color: var(--secondary-color);
+    margin-bottom: $space-1;
+  }
+
+  a {
+    color: var(--accent-color);
+    cursor: pointer;
+    transition: color 0.2s ease;
+    &:hover {
+      color: var(--accent-color-hover);
+    }
+  }
+}
