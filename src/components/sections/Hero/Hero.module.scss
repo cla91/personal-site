@@ -1,0 +1,43 @@
+.hero {
+  color: var(--text-color-secondary);
+  padding-block-start: $section-spacing-m;
+  padding-block-end: $section-spacing-xxs;
+  transition: padding 0.3s ease, width 0.3s ease;
+  @include screen-md {
+    padding-block-start: $section-spacing-l;
+  }
+  @include screen-lg {
+    padding-block-end: $section-spacing-xs;
+    padding-block-start: $section-spacing-xxl;
+  }
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  font-family: $font-body;
+  color: var(--text-color-secondary);
+  font-size: 1.4rem;
+  line-height: 1.5;
+  font-weight: 400;
+  letter-spacing: normal;
+  transition: font-size 0.3s ease;
+  @include screen-md {
+    font-size: 1.6rem;
+  }
+}
+
+.role {
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--secondary-color);
+}
+
+.desc {
+  max-width: 60ch;
+  margin-block: $space-3 $space-4;
+  font-size: clamp(1.6rem, 1.484rem + 0.493vw, 1.8rem);
+}
