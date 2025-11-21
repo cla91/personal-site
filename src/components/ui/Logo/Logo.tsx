@@ -1,10 +1,9 @@
-import { Link } from "react-router-dom";
 import styles from "@/components/ui/Logo/Logo.module.scss";
 
 export default function Logo() {
   return (
-    <Link to={"/"} className={styles.logo}>
+    <a href={"/"} className={styles.logo}>
       Claudia Cantiani
-    </Link>
+    </a>
   );
 }

@@ -1,5 +1,4 @@
 import { navLinks } from "@/data/navigationData";
-import { NavLink } from "react-router-dom";
 import styles from "@/components/layout/DesktopNavigation/DesktopNavigation.module.scss";
 
 export default function DesktopNavigation() {
@@ -8,14 +7,11 @@ export default function DesktopNavigation() {
       <ul>
         {navLinks.map(({ to, label }) => (
           <li key={to}>
-            <NavLink
-              to={to}
-              className={({ isActive }) =>
-                `${styles.link} ${isActive ? styles.active : ""}`
-              }
-            >
-              {label}
-            </NavLink>
+            {
+              <a href={to} className={`${styles.link}`}>
+                {label}
+              </a>
+            }
           </li>
         ))}
       </ul>

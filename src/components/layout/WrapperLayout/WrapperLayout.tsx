@@ -9,7 +9,11 @@ export default function WrapperLayout({ children }: WrapperLayoutProps) {
     <>
       <Header />
       {children}
-      <footer>Footer</footer>
+      <footer className="container">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem quaerat
+        rem impedit a dicta minima maiores sed harum ad debitis explicabo
+        perspiciatis quas assumenda nemo fugit facere, totam quisquam sequi?
+      </footer>
     </>
   );
 }

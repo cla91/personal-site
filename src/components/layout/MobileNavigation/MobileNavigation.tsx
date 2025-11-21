@@ -1,4 +1,3 @@
-import { NavLink } from "react-router-dom";
 import styles from "@/components/layout/MobileNavigation/MobileNavigation.module.scss";
 import { navLinks } from "@/data/navigationData";
 import HamburgerButton from "@/components/ui/button/HamburgerButton/HamburgerButton";
@@ -17,13 +16,9 @@ export default function MobileNavigation() {
         <ul>
           {navLinks.map(({ to, label }) => (
             <li key={to}>
-              <NavLink
-                to={to}
-                onClick={() => setIsMenuOpen(false)}
-                className={({ isActive }) => (isActive ? styles.active : "")}
-              >
+              <a href={to} onClick={() => setIsMenuOpen(false)} className="">
                 {label}
-              </NavLink>
+              </a>
             </li>
           ))}
         </ul>
