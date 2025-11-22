@@ -12,11 +12,15 @@ export default function MobileNavigation() {
         className={`${styles.closeArea} ${isMenuOpen ? styles.open : ""}`}
         onClick={() => setIsMenuOpen(false)}
       />
-      <nav className={`${styles.menu} ${isMenuOpen ? styles.open : ""}`}>
+      <nav
+        className={`${styles.menu} ${isMenuOpen ? styles.open : ""}`}
+        aria-hidden={!isMenuOpen}
+        inert={!isMenuOpen}
+      >
         <ul>
           {navLinks.map(({ to, label }) => (
             <li key={to}>
-              <a href={to} onClick={() => setIsMenuOpen(false)} className="">
+              <a href={to} onClick={() => setIsMenuOpen(false)}>
                 {label}
               </a>
             </li>

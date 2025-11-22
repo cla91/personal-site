@@ -9,14 +9,10 @@
     font-size: 1.6rem;
     font-weight: 500;
     position: relative;
-    color: var(--text-color-secondary);
+    color: var(--text-color);
     padding-block: $space-1;
     &:hover:not(.active) {
-      color: var(--accent-color-hover);
-    }
-    &.active {
       color: var(--accent-color);
-      font-weight: 600;
     }
     &:focus-visible {
       outline: 0.2rem solid var(--focus-outline);

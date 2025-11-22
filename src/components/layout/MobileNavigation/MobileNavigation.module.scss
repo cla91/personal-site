@@ -1,7 +1,7 @@
 .menu {
   position: fixed;
   top: 0;
-  right: -100%; // default hidden
+  right: -100%;
   height: 100vh;
   height: 100dvh;
   width: min(70%, 25rem);
@@ -30,11 +30,7 @@
   width: 100%;
   display: block;
   &:hover {
-    color: var(--accent-color-hover);
-  }
-  &.active {
     color: var(--accent-color);
-    font-weight: 600;
   }
 }
 

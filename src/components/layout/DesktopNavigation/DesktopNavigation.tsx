@@ -6,13 +6,7 @@ export default function DesktopNavigation() {
     <nav className={styles.menu}>
       <ul>
         {navLinks.map(({ to, label }) => (
-          <li key={to}>
-            {
-              <a href={to} className={`${styles.link}`}>
-                {label}
-              </a>
-            }
-          </li>
+          <li key={to}>{<a href={to}>{label}</a>}</li>
         ))}
       </ul>
     </nav>
