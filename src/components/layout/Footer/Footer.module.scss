@@ -1,0 +1,39 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: $space-4;
+  font-size: 1.3rem;
+  color: var(--text-color-secondary);
+  svg {
+    width: 2rem;
+    height: 2rem;
+  }
+  a {
+    color: var(--text-color-secondary);
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: var(--accent-color);
+    }
+  }
+  @include screen-md {
+    flex-direction: row;
+  }
+}
+
+.socialList {
+  display: flex;
+  gap: $space-4;
+}
+.repoLink {
+  display: flex;
+  align-items: center;
+  gap: $space-2;
+  svg {
+    width: 1.4rem;
+    height: 1.4rem;
+  }
+  @include screen-md {
+    margin-inline-start: auto;
+  }
+}

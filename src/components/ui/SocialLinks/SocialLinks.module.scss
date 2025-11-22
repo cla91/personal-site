@@ -1,0 +1,18 @@
+.iconLink {
+  color: var(--icon-color);
+  transition: color 0.2s ease, transform 0.2s ease;
+
+  &:hover {
+    color: var(--accent-color);
+    transform: translateY(-0.2rem);
+  }
+}
+
+.icon {
+  width: 2.2rem;
+  height: auto;
+
+  @include screen-md {
+    width: 2.4rem;
+  }
+}
