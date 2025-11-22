@@ -1,0 +1,74 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: $space-5;
+  transition: transform 0.2s ease;
+  &:hover {
+    transform: translateY(-3px);
+  }
+  @include screen-md {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.title {
+  margin-block-end: $space-1;
+}
+.desc {
+  font-size: 1.4rem;
+  color: var(--text-color-secondary);
+  max-width: 56ch;
+}
+
+.projectImg {
+  border-radius: $space-2;
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  object-position: top;
+  max-width: 30rem;
+  transition: max-width 0.2s ease;
+  @include screen-lg {
+    max-width: 35rem;
+  }
+}
+
+.techList {
+  margin-block: $space-3 $space-5;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: $space-2;
+  row-gap: $space-1;
+  li {
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+  }
+}
+
+.linkList {
+  display: flex;
+  gap: $space-4;
+  a {
+    display: flex;
+    align-items: center;
+    gap: $space-1;
+    color: var(--accent-color);
+    padding: $space-2;
+    transition: color 0.2s ease, transform 0.2s ease;
+
+    &:hover {
+      color: var(--accent-color-hover);
+      transform: translateY(-0.3rem);
+    }
+    .githubIcon {
+      width: 2.2rem;
+      height: auto;
+    }
+    :global(.lucide) {
+      width: 2.6rem;
+      height: auto;
+    }
+  }
+}

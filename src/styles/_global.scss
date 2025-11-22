@@ -11,7 +11,14 @@ body {
   background-color: var(--bg-color);
   font-size: 1.6rem;
 }
-
+a,
+button {
+  &:focus-visible {
+    outline: 0.2rem solid var(--focus-outline);
+    outline-offset: 0.3rem;
+    border-radius: 0.2rem;
+  }
+}
 @media (prefers-reduced-motion: reduce) {
   * {
     transition: none !important;
