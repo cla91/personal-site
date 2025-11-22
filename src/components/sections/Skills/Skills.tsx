@@ -1,15 +1,16 @@
 import styles from "@/components/sections/Skills/Skills.module.scss";
 import { skills } from "@/data/skillsData";
+import useRevealOnScroll from "@/hooks/useRevealOnScroll";
 
 export default function Skills() {
   const { hardSkills, softSkills, studying } = skills;
-
+  const titleRef = useRevealOnScroll<HTMLHeadingElement>();
   return (
     <section
       id="skills"
       className={`container navigableSection ${styles.skills}`}
     >
-      <h2>Skills</h2>
+      <h2 ref={titleRef}>Skills</h2>
       <p className={styles.intro}>
         Le tecnologie e le capacità su cui costruisco la mia base da Frontend
         Developer.

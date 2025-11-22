@@ -1,15 +1,19 @@
 import styles from "@/components/sections/About/About.module.scss";
-import profilePhoto from "@/assets/images/hero-image.webp";
+import profilePhoto from "@/assets/images/hero-image.png";
+import useRevealOnScroll from "@/hooks/useRevealOnScroll";
 
 export default function About() {
+  const titleRef = useRevealOnScroll<HTMLHeadingElement>();
+  const imgRef = useRevealOnScroll<HTMLImageElement>();
   return (
     <section
       id="chi-sono"
       className={`container navigableSection ${styles.about}`}
     >
-      <h2>Chi sono</h2>
+      <h2 ref={titleRef}>Chi sono</h2>
       <div className={styles.wrapper}>
         <img
+          ref={imgRef}
           src={profilePhoto}
           alt="Foto di Claudia Cantiani"
           className={styles.photo}

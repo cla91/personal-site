@@ -9,6 +9,7 @@ interface ProjectCardProps {
 
 export default function ProjectCard({ project }: ProjectCardProps) {
   const { id, title, longDesc, image, live, repo, technologies } = project;
+
   return (
     <article id={id} className={styles.card}>
       <div className={styles.cardContent}>

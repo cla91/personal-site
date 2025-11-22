@@ -1,8 +1,8 @@
-import globalWarmingImg from "@/assets/images/project-global-warming-dashboard.png";
-import beetHeartImg from "@/assets/images/project-beet-heart.png";
-import planetsImg from "@/assets/images/project-planet-facts-site.png";
-import cardFormImg from "@/assets/images/project-interactive-card-details-form.png";
-import counterImg from "@/assets/images/project-character-counter.png";
+import globalWarmingImg from "@/assets/images/project-global-warming-dashboard.webp";
+import beetHeartImg from "@/assets/images/project-beet-heart.webp";
+import planetsImg from "@/assets/images/project-planet-facts-site.webp";
+import cardFormImg from "@/assets/images/project-interactive-card-details-form.webp";
+import counterImg from "@/assets/images/project-character-counter.webp";
 
 export interface Project {
   id: string;

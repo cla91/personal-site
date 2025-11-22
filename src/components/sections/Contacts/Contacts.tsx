@@ -1,9 +1,11 @@
 import styles from "@/components/sections/Contacts/Contacts.module.scss";
+import useRevealOnScroll from "@/hooks/useRevealOnScroll";
 
 export default function Contacts() {
+  const titleRef = useRevealOnScroll<HTMLHeadingElement>();
   return (
     <section id="contatti" className={`container navigableSection`}>
-      <h2>Contatti</h2>
+      <h2 ref={titleRef}>Contatti</h2>
       <p className={styles.intro}>
         Per collaborazioni o domande, puoi contattarmi tramite questi canali.
       </p>

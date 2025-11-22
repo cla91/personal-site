@@ -1,9 +1,12 @@
 import styles from "@/components/sections/Hero/Hero.module.scss";
 import Cta from "@/components/ui/Cta/Cta";
+import useRevealOnScroll from "@/hooks/useRevealOnScroll";
 
 export default function Hero() {
+  const heroRef = useRevealOnScroll();
+
   return (
-    <section className={`${styles.hero} container`}>
+    <section ref={heroRef} className={`${styles.hero} container`}>
       <h1 className={styles.title}>
         <span className={styles.label}>Ciao, sono </span>
         <span className={styles.name}>Claudia Cantiani</span>

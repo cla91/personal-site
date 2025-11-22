@@ -3,16 +3,17 @@ import ProjectCard from "@/components/sections/ProjectCard/ProjectCard";
 import { useState } from "react";
 import styles from "@/components/sections/Projects/Projects.module.scss";
 import { ChevronDown } from "lucide-react";
+import useRevealOnScroll from "@/hooks/useRevealOnScroll";
 
 export default function Projects() {
   const [showMore, setShowMore] = useState<boolean>(false);
-
+  const titleRef = useRevealOnScroll<HTMLHeadingElement>();
   return (
     <section
       id="progetti"
       className={`container navigableSection ${styles.projectsSection}`}
     >
-      <h2>Progetti</h2>
+      <h2 ref={titleRef}>Progetti</h2>
       <ul className={styles.projectsList}>
         {projects.map((project) => {
           if (showMore) {
