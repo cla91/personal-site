@@ -1,73 +1,125 @@
-# React + TypeScript + Vite
+# Claudia Cantiani – Personal Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A clean, accessible, and fully responsive portfolio showcasing my work as a Frontend Developer.
+Built with a strong focus on performance, semantic HTML, maintainable architecture, and a smooth user experience.
 
-Currently, two official plugins are available:
+**[livesiteurl](livesiteurl)**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🚀 Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **React** (with functional components & hooks)
+- **TypeScript**
+- **SCSS Modules** (scoped styling, variables, mixins, responsive utilities)
+- **Vite** (fast dev environment and optimized build)
+- **Lucide Icons**
+- **Intersection Observer** (lightweight reveal-on-scroll animations)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## ✨ Features
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### 📱 Fully Responsive
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Optimized for mobile, tablet, and desktop using a spacing system and custom SCSS breakpoints.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### 🎨 Clean & Accessible UI
+
+- High color-contrast theme
+- Semantic HTML
+- Focus states on all interactive elements
+- Screen-reader labels
+- Logical heading hierarchy
+
+### 🧩 Modular Components
+
+Each section (Hero, About, Skills, Projects, Contact, Footer…) is isolated into its own component.
+
+### Subtle Animations
+
+Lightweight entrance animations via Intersection Observer — no large animation libraries.
+
+### Project Showcase
+
+Projects are loaded from a structured data file and displayed responsively.
+Each card includes:
+
+- Description
+- Technologies
+- Live Demo link
+- GitHub repo link
+
+---
+
+## 📂 Project Structure
+
+```
+src/
+ ├─ components/
+ │   ├─ layout/
+ │   ├─ sections/
+ │   └─ ui/
+ ├─ data/
+ ├─ hooks/
+ ├─ pages/
+ ├─ styles/
+ └─ App.tsx
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- **components/** – UI blocks and section components
+- **data/** – Structured project & skills data
+- **hooks/** – Custom hooks (e.g., reveal-on-scroll)
+- **styles/** – SCSS variables, mixins, global styles
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 🛠 Setup & Development
+
+### Install dependencies
+
+```bash
+npm install
 ```
+
+### **Run locally**
+
+```bash
+npm run dev
+```
+
+### **Build for production**
+
+```bash
+npm run build
+```
+
+### **Preview production build**
+
+```bash
+npm run preview
+```
+
+---
+
+## 📸 Open Graph & SEO
+
+- Custom title & meta description
+- Valid social preview (OpenGraph tags)
+- Favicon included
+
+---
+
+## 🔗 Live Site
+
+**[livesiteurl](livesiteurl)**
+
+---
+
+## 🧑‍💻 Author
+
+**Claudia Cantiani**
+Frontend Developer
+
+- GitHub: [https://github.com/cla91](https://github.com/cla91)
+- LinkedIn: [https://linkedin.com/in/claudia-cantiani](https://linkedin.com/in/claudia-cantiani)
