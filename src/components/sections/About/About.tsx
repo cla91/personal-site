@@ -1,5 +1,5 @@
 import styles from "@/components/sections/About/About.module.scss";
-import profilePhoto from "@/assets/images/hero-image.png";
+import profilePhoto from "@/assets/images/profile-photo.webp";
 import useRevealOnScroll from "@/hooks/useRevealOnScroll";
 
 export default function About() {
