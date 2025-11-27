@@ -15,23 +15,13 @@ export default function Projects() {
     >
       <h2 ref={titleRef}>Progetti</h2>
       <ul className={styles.projectsList}>
-        {projects.map((project) => {
-          if (showMore) {
-            return (
-              <li key={project.id}>
-                <ProjectCard project={project} />
-              </li>
-            );
-          } else {
-            return (
-              project.featured && (
-                <li key={project.id}>
-                  <ProjectCard project={project} />
-                </li>
-              )
-            );
-          }
-        })}
+        {projects
+          .filter((project) => showMore || project.featured)
+          .map((project) => (
+            <li key={project.id}>
+              <ProjectCard project={project} />
+            </li>
+          ))}
       </ul>
       <button
         className={styles.showMoreBtn}
