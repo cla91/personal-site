@@ -3,7 +3,7 @@
 A clean, accessible, and fully responsive portfolio showcasing my work as a Frontend Developer.
 Built with a strong focus on performance, semantic HTML, maintainable architecture, and a smooth user experience.
 
-**[livesiteurl](livesiteurl)**
+**[livesiteurl](https://claudia-cantiani.netlify.app/)**
 
 ---
 
@@ -112,7 +112,7 @@ npm run preview
 
 ## 🔗 Live Site
 
-**[livesiteurl](livesiteurl)**
+**[livesiteurl](https://claudia-cantiani.netlify.app/)**
 
 ---
 
